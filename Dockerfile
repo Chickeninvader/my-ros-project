@@ -4,6 +4,7 @@ ARG DESCRIPTION="My first DTProject for Duckietown"
 ARG MAINTAINER="Albert Vo (ngocbach@asu.edu)"~
 # pick an icon from: https://fontawesome.com/v4.7.0/icons/
 ARG ICON="cube"
+RUN pip3 install duckietown-utils
 
 # ==================================================>
 # ==> Do not change the code below this line
