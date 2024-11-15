@@ -5,9 +5,8 @@ source /environment.sh
 # initialize launch file
 dt-launchfile-init
 
-# launch traffic light
-roslaunch traffic_light traffic_light_node.launch
-
+# launch subscriber
+rosrun my_package wheel_control_node.py
 
 # wait for app to end
 dt-launchfile-join
