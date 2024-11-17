@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import rospy
+import os
 
 from duckietown_msgs.msg import LEDPattern
 from duckietown_msgs.srv import SetCustomLEDPattern
@@ -53,7 +54,7 @@ class TrafficLightNode(DTROS):
 
         # Function mapping to LEDEmitterNode's `set_custom_pattern` service
         self.changePattern = rospy.ServiceProxy(
-            apply_namespace("led_emitter_node/set_custom_pattern", ns_level=1), SetCustomLEDPattern
+            f"/{os.environ['VEHICLE_NAME']}/led_emitter_node/set_custom_pattern", SetCustomLEDPattern
         )
 
         # Start a timer that will regularly call a method that changes
