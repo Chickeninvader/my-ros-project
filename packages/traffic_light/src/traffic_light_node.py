@@ -37,11 +37,11 @@ class TrafficLightNode(DTROS):
         super(TrafficLightNode, self).__init__(node_name=node_name, node_type=NodeType.COMMUNICATION)
 
         # Import protocols
-        self._number_leds = rospy.get_param("~number_leds")
-        self._activation_order = rospy.get_param("~activation_order")
-        self._green_time = rospy.get_param("~green_time")
-        self._all_red_time = rospy.get_param("~all_red_time")
-        self._frequency = rospy.get_param("~frequency")
+        self._number_leds = 4
+        self._activation_order = [0, 1, 2, 0]
+        self._green_time = 10
+        self._all_red_time = 3
+        self._frequency = 10.8
 
         self.green_idx = 0
 

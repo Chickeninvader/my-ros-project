@@ -6,7 +6,7 @@ source /environment.sh
 dt-launchfile-init
 
 # launch traffic light
-roslaunch traffic_light traffic_light_node.launch
+rosrun traffic_light traffic_light_node.py
 
 
 # wait for app to end
